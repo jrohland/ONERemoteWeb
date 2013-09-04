@@ -1,0 +1,67 @@
+{
+  "buttons": [
+    {
+      "name": "power",
+      "text": "Power",
+      "icon": "off",
+      "code": "1913",
+      "width": "120px",
+      "x": "20px",
+      "y": "20px"
+    },
+    {
+      "name": "source",
+      "text": "Source",
+      "icon": "list",
+      "code": "1914",
+      "width": "120px",
+      "x": "20px",
+      "y": "70px"
+    },
+    {
+      "name": "ok",
+      "text": "Ok",
+      "code": "1945",
+      "width": "60px",
+      "height": "60px",
+      "x": "220px",
+      "y": "290px"
+    },
+    {
+      "name": "up",
+      "icon": "circle-arrow-up",
+      "code": "1936",
+      "width": "60px",
+      "height": "60px",
+      "x": "220px",
+      "y": "225px"
+    },
+    {
+      "name": "down",
+      "icon": "circle-arrow-down",
+      "code": "1937",
+      "width": "60px",
+      "height": "60px",
+      "x": "220px",
+      "y": "355px"
+    },
+    {
+      "name": "left",
+      "icon": "circle-arrow-left",
+      "code": "1938",
+      "width": "60px",
+      "height": "60px",
+      "x": "155px",
+      "y": "290px"
+    },
+    {
+      "name": "right",
+      "icon": "circle-arrow-right",
+      "code": "1939",
+      "width": "60px",
+      "height": "60px",
+      "x": "285px",
+      "y": "290px"
+    }
+  ]
+}

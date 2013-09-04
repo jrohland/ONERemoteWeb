@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Main layout -->
+    <link rel="stylesheet" href="css/layout.css">
+  </head>
+  <body>
+    <div id="wrap">
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        
+        <ul class="nav navbar-nav navbar-left remote-menu">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">-- no remotes added-- <b class="caret"></b></a>
+            <ul class="dropdown-menu"></ul>
+          </li>
+        </ul>
+          
+      </nav>
+
+      <div class="remote">
+        <div class="container">
+          <h1>Add a new remote or install the default remotes from the menu below</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="alert-placeholder" class="pull-left"></div>
+      <div class="btn-group dropup action-menu pull-right">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-wrench"></span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li data-action="save"><a href="#"><span class="glyphicon glyphicon-floppy-disk"></span> Save</a></li>
+          <li data-action="new-remote"><a href="#"><span class="glyphicon glyphicon-new-window"></span> New Remote</a></li>
+          <li data-action="edit-remote"><a href="#"><span class="glyphicon glyphicon-resize-full"></span> Edit Remote</a></li>
+          <li data-action="delete-remote"><a href="#"><span class="glyphicon glyphicon-remove-sign"></span> Delete Remote</a></li>
+          <li data-action="default-remotes"><a href="#"><span class="glyphicon glyphicon-star-empty"></span> Default Remotes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="delete-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Delete remote?</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger delete">Delete</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="install-default-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Install default remotes?</h4>
+          </div>
+          <div class="modal-body">
+            This will overwrite all of your saved remotes!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger install">Install</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="edit-remote-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Edit remote</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="remote-name" class="control-label">Name</label>
+                <input type="text" class="form-control" id="remote-name" placeholder="Remote Name">
+              </div>
+              <div class="form-group">
+                <label for="remote-buttons" class="control-label">Buttons</label>
+                <textarea class="form-control" rows="12" id="remote-buttons"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary save">Save</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	  <!-- Main interface -->
+	  <script src="js/layout.js"></script>
+  </body>
+</html>

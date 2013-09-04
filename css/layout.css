@@ -1,0 +1,45 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: 50px;
+  background-color: #eee;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+.remote-menu {
+	padding-left: 10px;
+}
+
+.remote .container {
+  padding: 30px 5px 30px 5px;
+  text-align: center;
+  position: relative;
+}
+
+.remote .btn.text-left {
+  text-align: left;
+}
+
+#footer {
+  position: relative;
+  margin-top: -65px;
+  clear: both;
+  padding-top: 20px;
+} 
+
+#footer .action-menu {
+	padding-right: 10px;
+}
+
+#footer #alert-placeholder {
+	width: 280px;
+	height: 35px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-top: -20px;
+}
