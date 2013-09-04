@@ -1,0 +1,35 @@
+{
+  "id": "ac",
+  "name": "AC",
+  "buttons": [
+    {
+      "name": "power",
+      "text": "Power",
+      "icon": "off",
+      "code": "8885",
+      "width": "auto",
+      "x": "20px",
+      "y": "20px"
+    },
+    {
+      "name": "temp-up",
+      "text": "Temp Up",
+      "icon": "arrow-up",
+      "code": "8887",
+      "width": "155px",
+      "x": "150px",
+      "y": "20px",
+      "align": "left"
+    },
+    {
+      "name": "temp-down",
+      "text": "Temp Down",
+      "icon": "arrow-down",
+      "code": "8886",
+      "width": "155px",
+      "x": "150px",
+      "y": "80px",
+      "align": "left"
+    }
+  ]
+}

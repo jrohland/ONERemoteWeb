@@ -1,4 +1,5 @@
 (function() {
+	var defaultRemoteNames = ['tv','ac'];
 	var remotes = {};
 	var currentRemote = null;
 
@@ -6,8 +7,8 @@
 
 		var initalizeRemoteMenu = function() {
 			$('.nav.remote-menu .dropdown-menu').children().remove();
-			for (var remoteName in remotes) {
-				$('.nav.remote-menu .dropdown-menu').append('<li data-remote-name="' + remoteName + '"><a href="#">' + remoteName + '</a></li>');
+			for (var remoteId in remotes) {
+				$('.nav.remote-menu .dropdown-menu').append('<li data-remote-name="' + remoteId + '"><a href="#">' + remotes[remoteId]['name'] + '</a></li>');
 			}
 
 			$('.nav.remote-menu .dropdown-menu li').click(function() {
@@ -156,87 +157,16 @@
 	};
 
 	var installDefaultRemotes = function() {
-		remotes = {
-			'TV': {
-				buttons: [
-				    {
-				      "name": "power",
-				      "text": "Power",
-				      "icon": "off",
-				      "code": "1913",
-				      "width": "120px",
-				      "x": "20px",
-				      "y": "20px"
-				    },
-				    {
-				      "name": "source",
-				      "text": "Source",
-				      "icon": "list",
-				      "code": "1914",
-				      "width": "120px",
-				      "x": "20px",
-				      "y": "70px"
-				    },
-				    {
-				      "name": "ok",
-				      "text": "Ok",
-				      "code": "1945",
-				      "width": "60px",
-				      "height": "60px",
-				      "x": "220px",
-				      "y": "290px"
-				    },
-				    {
-				      "name": "up",
-				      "icon": "circle-arrow-up",
-				      "code": "1936",
-				      "width": "60px",
-				      "height": "60px",
-				      "x": "220px",
-				      "y": "225px"
-				    },
-				    {
-				      "name": "down",
-				      "icon": "circle-arrow-down",
-				      "code": "1937",
-				      "width": "60px",
-				      "height": "60px",
-				      "x": "220px",
-				      "y": "355px"
-				    },
-				    {
-				      "name": "left",
-				      "icon": "circle-arrow-left",
-				      "code": "1938",
-				      "width": "60px",
-				      "height": "60px",
-				      "x": "155px",
-				      "y": "290px"
-				    },
-				    {
-				      "name": "right",
-				      "icon": "circle-arrow-right",
-				      "code": "1939",
-				      "width": "60px",
-				      "height": "60px",
-				      "x": "285px",
-				      "y": "290px"
-				    }
-				  ]
-			},
-			'Receiver': {
-				buttons: []
-			},
-			'DVR': {
-				buttons: []
-			},
-			'AC': {
-				buttons: [
-					{ name: 'power',      text: 'Power',      icon: 'off',        code: '8885', width: 'auto',  x: '20px',  y: '20px' },
-					{ name: 'temp-up',    text: 'Temp Up',    icon: 'arrow-up',   code: '8887', width: '155px', x: '150px', y: '20px', align: 'left' },
-					{ name: 'temp-down',  text: 'Temp Down',  icon: 'arrow-down', code: '8886', width: '155px', x: '150px', y: '80px', align: 'left' }
-				]
-			}
+		remotes = {};
+		for (i = 0; i < defaultRemoteNames.length; i++) {
+			$.ajax({
+			  url: "remotes/" + defaultRemoteNames[i] + ".json",
+			  dataType: 'json',
+			  async: false,
+			  success: function(data) {
+			  	remotes[data['id']] = data;
+			  }
+			});
 		};
 		saveRemotes();
 		refreshRemotes();

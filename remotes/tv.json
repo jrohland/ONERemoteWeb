@@ -1,4 +1,6 @@
 {
+  "id": "tv",
+  "name": "TV",
   "buttons": [
     {
       "name": "power",
