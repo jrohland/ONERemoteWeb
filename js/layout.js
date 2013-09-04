@@ -104,7 +104,7 @@
 
 		for (var i = 0; i < remote['buttons'].length; i++) {
 			var button = remote['buttons'][i];
-			var buttonHtml = '<button type="button" class="btn btn-default btn-lg" style="position:absolute;" data-button-code="' + button['code'] + '">';
+			var buttonHtml = '<button type="button" class="btn btn-default" style="position:absolute;" data-button-code="' + button['code'] + '">';
 
 		    if ('icon' in button) {
 		    	buttonHtml += '<span class="glyphicon glyphicon-' + button['icon'] + '"></span>';
@@ -139,6 +139,10 @@
 		    	buttonEle.addClass('text-' + button['align']);
 		    } else {
 		    	buttonEle.addClass('text-center');
+		    }
+
+		    if ('class' in button) {
+		    	buttonEle.addClass(button['class']);
 		    }
 
 		    buttonEle.click(function() {
