@@ -1,5 +1,5 @@
 (function() {
-	var defaultRemoteNames = ['tv','receiver','ac'];
+	var defaultRemoteNames = ['tv','receiver','dvr','ac'];
 	var remotes = {};
 	var currentRemote = null;
 
